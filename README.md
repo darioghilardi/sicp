@@ -1,2 +1,2 @@
-# sicp
-Some SICP exercises.
+# SICP
+My SICP notes and exercises.
