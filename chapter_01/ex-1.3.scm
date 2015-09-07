@@ -1,0 +1,21 @@
+(define (sum-of-squares a b c)
+  (cond ((= a (lowest a b c))
+          (+ (square b) (square c))
+        )
+        ((= b (lowest a b c))
+          (+ (square a) (square c))
+        )
+        ((= c (lowest a b c))
+          (+ (square a) (square b))
+        )))
+
+(define (square a) (* a a))
+
+(define (lowest a b c)
+  (if (< a b)
+    (if (< a c) a c)
+    (if (< b c) b c)))
+
+(sum-of-squares 2 3 4)
+(sum-of-squares 4 3 2)
+(sum-of-squares 3 2 4)
